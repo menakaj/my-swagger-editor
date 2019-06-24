@@ -1,6 +1,7 @@
 ### Swagger-Editor React integration.
 
-##Run the Application
+## Run the Application
 
-`` npm install 
-`` npm start
+`npm install`
+
+`npm start`
