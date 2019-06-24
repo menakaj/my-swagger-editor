@@ -1,0 +1,66 @@
+Step 1 : Create react app
+npx create-react-app react-swagge
+
+and check whether is working
+npm start.
+
+Step 2:
+Add swagger-edior dependancy
+npm install swagger-editor
+
+Step 3
+
+Open App.js, add the swagger editor dependancies
+
+import SwaggerEditor, {plugins} from 'swagger-editor';
+import 'swagger-editor/dist/swagger-editor.css';
+
+Create an empty <div> with an id
+<div id='swagger-editor' />
+
+Instanciate the swagger editor 
+
+window.editor = SwaggerEditor({
+      dom_id: '#swagger-editor',
+      layout: 'EditorLayout',
+      plugins: Object.values(plugins),
+      swagger2GeneratorUrl: 'https://generator.swagger.io/api/swagger.json',
+      oas3GeneratorUrl: 'https://generator3.swagger.io/openapi.json',
+      swagger2ConverterUrl: 'https://converter.swagger.io/api/convert',
+  });
+
+open index.css and add following css properties
+
+#swagger-editor {
+  font-size: 1.3em;
+}
+
+.container {
+  height: 100%;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#editor-wrapper {
+  height: 100%;
+  border: 1em solid #000;
+  border: none;
+}
+
+.Pane2 {
+  overflow-y: scroll;
+}
+
+
+Loading and Saving the editor changes
+
+
+The content of the swagger-editor is stored in the browser's local storage. 
+Therefore, when we load our content or to get the editor content, we can use the local storage entries.
+
+Let's add some functionality to our application. 
+Use material ui.
+
+
+
